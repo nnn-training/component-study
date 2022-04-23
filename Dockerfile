@@ -6,4 +6,10 @@ RUN locale-gen ja_JP.UTF-8
 RUN localedef -f UTF-8 -i ja_JP ja_JP
 ENV LANG=ja_JP.UTF-8
 ENV TZ=Asia/Tokyo
-WORKDIR /app
+WORKDIR /app/my-app
+
+COPY ./my-app/package.json ./
+COPY ./my-app/yarn.lock ./
+COPY ./my-app/.yarnrc ./
+RUN yarn install
+COPY . .

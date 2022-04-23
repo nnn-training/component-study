@@ -6,4 +6,6 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - .:/app
+      - .:/app:cached
+      - /app/my-app/node_modules
+      - /app/my-app/.next

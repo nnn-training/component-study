@@ -1,0 +1,11 @@
+{
+	"name": "Next.js Container",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "app",
+	"workspaceFolder": "/app/my-app",
+	"settings": {},
+	"extensions": [],
+	"forwardPorts": [3000],
+}
